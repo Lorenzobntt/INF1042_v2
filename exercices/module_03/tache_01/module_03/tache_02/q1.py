@@ -1,10 +1,9 @@
 
-jours = 365
-heures = jours * 24
-minutes = heures * 60
-secondes = minutes * 60
+import random
 
-print("Jours :", jours)
-print("Heures :", heures)
-print("Minutes :", minutes)
-print("Secondes :", secondes)
+with open("valeurs.txt", "w") as fichier:
+    for i in range(1000):
+        nombre = random.randint(0, 100000)
+        fichier.write(str(nombre) + "\n")
+
+print("Fichier créé")
