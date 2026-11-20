@@ -1,12 +1,10 @@
+import random
 
-nombres = []
+eleves = {"Alexandre", "Lorenzo", "Yonas", "Sebastian",
+          "Liam", "Joshua", "Ben", "Hansel", "Elisee",
+          "Verlaine", "Miguel", "Roman", "Edwin", "Alexander"}
 
-try:
-    with open("valeurs.txt", "r") as fichier:
-        for ligne in fichier:
-            nombres.append(int(ligne.strip()))
-
-    if len(nombres) > 0:
-        print("Maximum :", max(nombres))
-        print("Minimum :", min(nombres))
-        print("Moyenne :", sum(nombres) / len(nombres))
+while eleves:
+    nom = random.choice(list(eleves))
+    print(nom)
+    eleves.remove(nom)
